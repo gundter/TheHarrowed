@@ -6,6 +6,8 @@
 #include "Character/HarrowedCharacterBase.h"
 #include "HarrowedCharacter.generated.h"
 
+class UCameraComponent;
+class USpringArmComponent;
 /**
  * 
  */
@@ -13,5 +15,16 @@ UCLASS()
 class THEHARROWED_API AHarrowedCharacter : public AHarrowedCharacterBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	AHarrowedCharacter();
+protected:
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaSeconds) override;
+private:
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	TObjectPtr<USpringArmComponent> CameraBoom;
+
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	TObjectPtr<UCameraComponent> FollowCamera;
 };
