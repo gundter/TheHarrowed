@@ -23,6 +23,7 @@ AHarrowedCharacter::AHarrowedCharacter()
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("CameraBoom");
 	CameraBoom->SetupAttachment(GetMesh());
+	CameraBoom->SocketOffset = FVector(0.f, 75.f, 50.f);
 	CameraBoom->bUsePawnControlRotation = true;
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>("FollowCamera");
