@@ -4,13 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "Character/HarrowedCharacterBase.h"
+#include "Interaction/EnemyInterface.h"
 #include "HarrowedEnemyCharacter.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class THEHARROWED_API AHarrowedEnemyCharacter : public AHarrowedCharacterBase
+class THEHARROWED_API AHarrowedEnemyCharacter : public AHarrowedCharacterBase, public IEnemyInterface
 {
 	GENERATED_BODY()
 	
