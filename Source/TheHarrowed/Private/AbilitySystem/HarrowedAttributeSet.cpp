@@ -3,12 +3,16 @@
 
 #include "AbilitySystem/HarrowedAttributeSet.h"
 
-#include "AbilitySystemComponent.h"
 #include "Net/UnrealNetwork.h"
 
 UHarrowedAttributeSet::UHarrowedAttributeSet()
 {
-	
+	InitHealth(100.f);
+	InitMaxHealth(100.f);
+	InitMana(50.f);
+	InitMaxMana(50.f);
+	InitStamina(100.f);
+	InitMaxStamina(100.f);
 }
 
 void UHarrowedAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
