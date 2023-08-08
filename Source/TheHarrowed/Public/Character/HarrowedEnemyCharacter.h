@@ -14,5 +14,7 @@ UCLASS()
 class THEHARROWED_API AHarrowedEnemyCharacter : public AHarrowedCharacterBase, public IEnemyInterface
 {
 	GENERATED_BODY()
-	
+
+public:
+	AHarrowedEnemyCharacter();
 };

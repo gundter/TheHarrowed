@@ -12,6 +12,11 @@ AHarrowedCharacterBase::AHarrowedCharacterBase()
 	Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
+UAbilitySystemComponent* AHarrowedCharacterBase::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
 void AHarrowedCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
