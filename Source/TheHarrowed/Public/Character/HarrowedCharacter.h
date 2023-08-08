@@ -19,6 +19,8 @@ class THEHARROWED_API AHarrowedCharacter : public AHarrowedCharacterBase
 public:
 	AHarrowedCharacter();
 protected:
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 private:
@@ -27,4 +29,6 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	TObjectPtr<UCameraComponent> FollowCamera;
+
+	void InitAbilityActorInfo();
 };

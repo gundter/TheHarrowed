@@ -14,3 +14,10 @@ AHarrowedEnemyCharacter::AHarrowedEnemyCharacter()
 	
 	AttributeSet = CreateDefaultSubobject<UHarrowedAttributeSet>("AttributeSet");
 }
+
+void AHarrowedEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}

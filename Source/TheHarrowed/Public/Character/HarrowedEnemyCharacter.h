@@ -17,4 +17,6 @@ class THEHARROWED_API AHarrowedEnemyCharacter : public AHarrowedCharacterBase, p
 
 public:
 	AHarrowedEnemyCharacter();
+protected:
+	virtual void BeginPlay() override;
 };
