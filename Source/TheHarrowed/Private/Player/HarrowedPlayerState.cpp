@@ -10,6 +10,7 @@ AHarrowedPlayerState::AHarrowedPlayerState()
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UHarrowedAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Mixed);
 	
 	AttributeSet = CreateDefaultSubobject<UHarrowedAttributeSet>("AttributeSet");
 	

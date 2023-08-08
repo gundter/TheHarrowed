@@ -10,6 +10,7 @@ AHarrowedEnemyCharacter::AHarrowedEnemyCharacter()
 {
 	AbilitySystemComponent = CreateDefaultSubobject<UHarrowedAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 	
 	AttributeSet = CreateDefaultSubobject<UHarrowedAttributeSet>("AttributeSet");
 }
